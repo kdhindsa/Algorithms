@@ -17,7 +17,7 @@ public class FindSimilar {
 	 * 						tighter.
 	 * @return				ArrayList of strings that are similar to strQuery based on the specified threshold_ji.
 	 */
-	public ArrayList<String> findSimilar_JaccardIndex(String strQuery, String[] strList, double threshold_ji) {
+	public ArrayList<String> findSimilar_JaccardIndex(String strQuery, ArrayList<String> strList, double threshold_ji) {
 		ArrayList<String> sList = new ArrayList<String>();
 		ArrayList<String> similarStrs = new ArrayList<String>();
 		
@@ -47,7 +47,7 @@ public class FindSimilar {
 	 * 						tighter.
 	 * @return				ArrayList of strings that are similar to strQuery based on the specified threshold_ld.
 	 */
-	public ArrayList<String> findSimilar_LevenshteinDistance(String strQuery, String[] strList, int threshold_ld) {
+	public ArrayList<String> findSimilar_LevenshteinDistance(String strQuery, ArrayList<String> strList, int threshold_ld) {
 		ArrayList<String> sList = new ArrayList<String>();
 		ArrayList<String> similarStrs = new ArrayList<String>();
 		

@@ -298,11 +298,9 @@ public class TestMain {
      */
     public static void testFindSimilarLevenshteinDistance(String testFile, String strQuery, int threshold_ld) {
     	ArrayList<String> fileArray =   File.readFile(testFile);
-        String [] strArray = new String[fileArray.size()];
-        fileArray.toArray(strArray);
     	
     	FindSimilar fs = new FindSimilar();
-    	ArrayList<String> simStrs = fs.findSimilar_LevenshteinDistance(strQuery, strArray, threshold_ld);
+    	ArrayList<String> simStrs = fs.findSimilar_LevenshteinDistance(strQuery, fileArray, threshold_ld);
     	
     	System.out.println("testFindSimilarLevenshteinDistance(): Strings similar to \"" + strQuery + "\" are");
     	for(String s : simStrs)
@@ -314,11 +312,9 @@ public class TestMain {
      */
     public static void testFindSimilarJaccardIndex(String testFile, String strQuery, double threshold_ji) {
     	ArrayList<String> fileArray =   File.readFile(testFile);
-        String [] strArray = new String[fileArray.size()];
-        fileArray.toArray(strArray);
-    	
+	
     	FindSimilar fs = new FindSimilar();
-    	ArrayList<String> simStrs = fs.findSimilar_JaccardIndex(strQuery, strArray, threshold_ji);
+    	ArrayList<String> simStrs = fs.findSimilar_JaccardIndex(strQuery, fileArray, threshold_ji);
     	
     	System.out.println("testFindSimilarJaccardIndex(): Strings similar to \"" + strQuery + "\" are");
     	for(String s : simStrs)
